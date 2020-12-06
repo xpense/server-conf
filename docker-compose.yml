@@ -17,7 +17,7 @@ services:
       - app
       - postgres
     networks:
-      - fullstack
+      - api_fullstack
 
   certbot:
     image: certbot/certbot
@@ -43,5 +43,5 @@ volumes:
 
 # Networks to be created to facilitate communication between containers
 networks:
-  fullstack:
-    driver: bridge
+  api_fullstack:
+    external: true
